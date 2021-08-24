@@ -1,0 +1,420 @@
+/* 
+    CSS 
+
+    Author: Ben Orrvick
+    Begin Date: Project began 08/02/2021
+    Last Updated: 08/19/2021
+*/
+/* imports fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
+
+
+/***********************START CSS ACROSS SITE ELEMENTS***********************/
+/* this beautiful piece of code helps visually see what may or may not be causing me an issue */
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }  */
+
+/* ovverides default body margin to give us an easier customizable starting point */
+body{
+    margin: 0px;
+}
+
+/* for all buttons across site and the submit button on contact page */
+button, #submit{
+    height: 50px;
+    width: 100px;
+    color: black;
+    background-color: white;
+    font-family: Staatliches, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: white;
+    border-style:ridge;
+    box-shadow: 5px 5px 5px black;
+    text-align: center;
+}
+/* styles all the inputs so for home page and contact */
+input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    width: 75%;
+    font-family: Raleway, sans-serif;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    outline: none;
+}
+
+.textboxContainer > input{
+    width: 25%;;
+}
+
+button:hover{
+    background-color: lightgrey;
+    transition: all 0.3s ease 0s;
+}
+
+/* customized the hello there font and all other h1 across site */
+h1{
+    margin: 0px;
+    text-align: center;
+    font-family: Staatliches, sans-serif;
+    font-size: 100px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+/* customize the about header */
+h2{
+    font-family: Staatliches, sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    margin: 50px;
+    text-align: center;
+}
+
+label{
+    padding:4px;
+    display: block;
+    margin: 5px auto;
+    width:50%;
+    text-align: center;
+    color: white;
+    font-family: Raleway, sans-serif;
+}
+/* this is the main container where content is and i wanted a subtle gradient background */
+#contentContainer{
+    margin: 0;
+    padding: 0;
+    min-height:100vh;
+    background-image: linear-gradient(to right, rgba(50,50,50), rgba(0,0,0));
+}
+
+/***********************BEGIN CSS FOR MENU***********************/
+
+/* this is also for the menu. it spaces and colors it */
+
+/* the container for the three bars for mobile also functions as button */
+.toggleButton{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 30px;
+}
+
+/* creates the three bars in menu for mobile */
+.toggleButton .bar{
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    /* keeps the bars in the parent */
+    margin: 1px 0;
+    border-radius: 10px;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: white;
+    
+}
+
+.navTabs{
+    display: flex;
+}
+
+  /* if we are on a specific page it will be reflect by color in the menu */
+.onPage{
+    border-bottom: 2px darkgrey solid;
+}
+
+/* this is for the menu links it gives them an imported font and sized them */
+.navTabs li, .navTabs a {
+    font-family: Staatliches, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    /* gets rid of default line under link */
+    list-style: none;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+/* menu item placement */
+.navTabs > li{
+    display: flex;
+    padding: 0px 20px;
+}
+/* give menu items a bottom line and animation */
+.navTabs > li >a{
+    border-bottom: 2px black transparent;
+    transition: all 0.3s ease 0s;
+}
+/* on hover changes menu item color  */
+.navTabs > li >a:hover{
+    color:darkgrey;
+    border-bottom: 2px darkgrey solid;
+}
+/***********************END CSS FOR MENU***********************/
+/***********************BEGIN CSS FOR FOOTER***********************/
+#footer{
+    /* i chose 40 because fornt is 10px and logos are 25px, and margin top is 10px and social logos contain padding bottom
+    60 gives us enough space */
+    height: 60px;
+    position: relative;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    color: grey;
+    font-size: 10px;
+    background-image: linear-gradient(to right, rgba(250,250,250), rgba(200,200,200));
+}
+
+.socialLogosContainer{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+/* for some reason the shorthand of changing the margings isnt working but if i specify
+ left and right it works. ill have to come back to the
+ */
+.socialLogos{
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+/***********************END CSS FOR FOOTER***********************/
+
+/***********************BEGIN CSS FOR INDEX PAGE***********************/
+.indexFlex{
+    display: flex;
+    flex-flow: column;
+}
+
+/* this is for the index page where the text is "Hello There." */
+.helloWrap{
+    margin: 50px auto;
+}
+
+/* the textbox where user enters their name */
+.textboxContainer{
+    text-align: center;
+}
+
+#firstName{
+    box-shadow: 5px 5px 5px black;
+    font-family: Raleway, sans-serif;
+}
+
+/* for the say hello buttom placement */
+.btnContainer{
+    margin:50px auto;
+    text-align: center;
+}
+/***********************END CSS FOR INDEX PAGE***********************/
+
+/***********************BEGIN CSS FOR ABOUT PAGE***********************/
+/* creates columns for the about page */
+/* i have left and right becaue when i short hand everyting it doesnt work in chrom browser */
+.aboutFlex{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left:50px;
+    margin-right: 50px;
+}
+
+/* affects the image placement */
+.profileImgWrap {
+    max-width: 350px;
+    max-height: 500px;
+    margin: 50px auto 0 auto;
+    /* overflow: hidden; */
+}
+/* this keeps the pic the size of the parent */
+.authorPic{
+    width: 100%;
+    max-height: 100%;
+    box-shadow: 5px 5px 5px black;
+}
+
+/* affects the text colum and makes words break if too long */
+.aboutContentWrap{
+    flex:1;
+    margin:50px;
+    word-wrap: break-word;
+}
+
+/* customize the about header */
+.aboutContentWrap > h2{
+    margin: 0;
+    text-align: left;
+}
+
+/* customize the about paragraph */
+.aboutContentWrap > p{
+    text-indent: 25px;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+.aboutContentWrap > .btn_container{
+    text-align: left;
+}
+/***********************END CSS FOR ABOUT PAGE***********************/
+
+/***********************BEGIN CSS FOR RESUME PAGE***********************/
+.resumeFlex{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.btnResume{
+    margin: 50px;
+    text-align: center;
+}
+
+/***********************END CSS FOR RESUME PAGE***********************/
+/***********************BEGIN CSS FOR CONTACT PAGE***********************/
+#form{
+    display:block;
+}
+
+.formControl label i{
+    /* makes the icons sit on top of each other */
+    position: absolute;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.formControl small{
+    font-family: Raleway, sans-serif;
+    display: block;
+    text-align: center;
+    visibility: hidden;
+}
+.formControl.error small{
+    visibility: visible;
+    color: #e74c3c ;
+}
+
+.formControl.success input {
+    border-bottom: 2px solid #2ecc71;
+}
+
+.formControl.success label i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71 ;
+}
+
+.formControl.error input {
+    border-bottom: 2px solid #e74c3c;
+}
+.formControl.error label i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c ;
+}
+
+/* styles the text area for email */
+#message{
+    padding: 5px;
+    display: inline-block;
+    margin: 5px auto;
+    text-align: left;
+    color: black;
+    font-family: Raleway, sans-serif;
+    width: 75%;
+    border: none;
+    background-image: linear-gradient(to right, rgba(250,250,250), rgba(200,200,200));
+    box-shadow: 5px 5px 5px black;
+}
+
+/* centers submit button */
+.submitDiv{
+    text-align: center;
+    margin: 50px;
+}
+
+.contactFlex{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* this is to style for mobile devices */
+@media(max-width: 700px){
+
+    .toggleButton{
+        display: flex;        
+    }
+
+    .navBar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding:0;
+        margin: 0;
+    }
+    .navTabs{
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    /* contact uses this so make the menue appear */
+    .navTabs.active {
+        display: flex;
+    }
+
+    .navTabs>li{
+        margin: 5px auto;
+    } 
+    #logoNav{
+        display: flex;
+        padding: 0;
+        margin: 5px 15px;
+    }
+
+    /* this is for the about page header */
+    .profileImgWrap {
+        max-width: 233px;
+        max-height: 333px;
+    }
+
+    .aboutContentWrap > h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    .aboutContentWrap{
+        margin: 50px 5px;
+        width: 100%;
+    }
+    .aboutContentWrap>p{
+        font-size: 15px;
+    }
+
+    .aboutFlex{
+        flex-direction: column;
+    }
+
+}
+
+

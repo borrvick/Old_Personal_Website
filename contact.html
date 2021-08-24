@@ -1,0 +1,111 @@
+<!--
+    This is the contact.html Here you will find a a contact form that connects to formspree to send an email
+
+    Author: Ben Orrvick
+    Begin Date: Project began 08/02/2021
+    Last Updated: 08/19/2021
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- site title -->
+        <title>Contact</title>
+        <link rel="shortcut icon" type="image/png" href="images/Logo_Favicon.png">
+        <!--styles sheet link-->
+       <link rel="stylesheet" href="styles.css">
+        <!-- links to font awesome for the icons -->
+       <script src="https://kit.fontawesome.com/cdf122fe30.js" crossorigin="anonymous" defer></script>
+       <script src="contact.js" defer></script>
+    </head>
+<!-- this section contains a form that is submitted to formspree to send emails to me -->
+    <body>
+        <!-- BEGIN NAV BAR -->
+        <!-- <header class="navBar"> -->
+            <nav class="navBar">
+                <a href="index.html"><img id="logoNav" class="logo" src="images/Logo_Ben_Orrvick.png" alt="logo" height="40" width="auto"></a>
+                <!-- creates the three bars for mobile -->                
+                <a href="#" class="toggleButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <ul class="navTabs">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="about.html">About</a></li>
+                    <li> <a href="resume.html">Resume</a></li>
+                    <li> <a class="onPage" href="">Contact</a></li>
+                    <li> <a href="https://github.com/borrvick">GitHub</a></li>
+                </ul>
+            </nav>
+        <!-- </header> -->
+        <!-- END OF NAV BAR -->
+            <!-- BEGIN CONTENT CONTAINER -->
+            <!-- this will hold all contents of page and has gradient blac background -->
+            <div id="contentContainer">
+                <div class="contactFlex">
+                    <div class="contactTxt">
+                        <h2>Contact Me.</h2>
+                    </div>
+                    <form class="form" id="form" action="https://formspree.io/f/moqypklk" method="POST">
+                        <div class="formControl">
+                            <!-- i put breaks to separate the lines -->
+                            <label for="email">E-Mail<br>
+                                <input  
+                                    title="E-mail"
+                                    type="email"
+                                    placeholder="Enter Email..."
+                                    id="email"
+                                    name="eMail">
+                                    <i class = "fas fa-check-circle"></i>
+                                    <i class = "fas fa-exclamation-circle"></i>
+                            </label>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="formControl">
+                            <label for="subject">Subject<br>
+                                <input  
+                                    title="Subject of Email"
+                                    type="text"
+                                    class="check"
+                                    placeholder="Enter Subject..."
+                                    id="subject"
+                                    name="subject">
+                                    <i class = "fas fa-check-circle"></i>
+                                    <i class = "fas fa-exclamation-circle"></i>
+                            </label>
+                            <small for="subject">Error Message</small>
+                        </div>
+                    </form>
+                    <div class="formControl">
+                        <label for="message">Message<br>
+                            <textarea name="Message" title="Message" form="form" placeholder="Enter Message..." id="message"></textarea>
+                            <i class = "fas fa-check-circle"></i>
+                            <i class = "fas fa-exclamation-circle"></i>
+                        </label>
+                        <small for="message">Error Message</small>
+                    </div>
+                    <div class="submitDiv">
+                        <button form="form" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT CONTAINER -->           
+        <!-- BEGIN FOOTER -->
+        <div id="footer">
+            <div class="socialLogosContainer">
+                <a href="https://www.facebook.com/ben.orrvick.9"><img id="logoFacebook" class= "socialLogos" src="images/Logo_Facebook.png" alt="facebook" width="25px" height="25px"></a>
+                <a href="https://www.twitter.com/benorrvick"><img id="logoTwitter" class= "socialLogos" src="images/Logo_Twitter.png" alt="twitter" width="25px" height="25px"></a>
+                <a href="contact.html"><img id="logoEmail"class= "socialLogos" src="images/Logo_Email.png" alt="email" width="25px" height="25px"></a>
+                <a href="https://www.linkedin.com/in/benjamin-orrvick-325036163"><img id="logoLinkedIn"class= "socialLogos" src="images/Logo_LinkedIn.png" alt="linkedin" width="25px" height="25px"></a>
+            </div>
+            <div>
+                Benjamin Orrvick 2021
+            </div>
+        </div>
+    <!-- END FOOTER -->
+    </body>
+</html>

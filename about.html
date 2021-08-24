@@ -1,0 +1,100 @@
+<!--
+    This is the about.html aka my bio and more information about me. this is the page that will open
+     when the say hello button from the index page is clicked or when the about section is clicked from menu
+
+    Author: Ben Orrvick
+    Begin Date: Project began 08/02/2021
+    Last Updated: 08/19/2021
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <link rel="shortcut icon" type="image/png" href="images/Logo_Favicon.png">
+        <!--styles sheet link-->
+       <link rel="stylesheet" href="styles.css">
+       <script src="mobile.js" defer></script>
+    </head>
+    <!-- a picutre with text and two buttons -->
+    <body>
+        <!-- BEGIN NAV BAR -->
+        <!-- <header class="navBar"> -->
+            <nav class="navBar">
+                <a href="index.html"><img id="logoNav" class="logo" src="images/Logo_Ben_Orrvick.png" alt="logo" height="40" width="auto"></a>
+                <!-- creates the three bars for mobile -->               
+                <a href="#" class="toggleButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <ul class="navTabs">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a class="onPage" href=""">About</a></li>
+                    <li> <a href="resume.html">Resume</a></li>
+                    <li> <a href="contact.html">Contact</a></li>
+                    <li> <a href="https://github.com/borrvick">GitHub</a></li>
+                </ul>
+            </nav>
+        <!-- </header> -->
+        <!-- END OF NAV BAR -->
+        <!-- BEGIN CONTENT CONTAINER -->
+        <!-- this will hold all contents of page and has gradient blac background -->
+        <div id="contentContainer">
+            <div class="aboutFlex">
+                <div class="profileImgWrap">
+                    <img class="authorPic" src="images/Author_Photo.png" alt="picture of author" >
+                </div>
+                <div class="aboutContentWrap">
+                    <h2>Nice to meet you.</h2>
+                    <p>
+                        My name is Ben. In May of 2020, I graduated from Clarion University and had high ambitions of starting my professional career 
+                        in the techworld. Unfortunately after many months of preparation and coming off the tail end of my senior capstone project,
+                         COVID hit, leaving myself and many others in a pickle. 
+                    </p>
+                    <p>
+                        Initially I was extremely concerned. Especially after creating plans for the past 4 years just to be halted by the pandemic. It
+                         did not take long for me to see the “set back” as one of the greatest opportunities that I have ever been given...time! I took 
+                         a step back from coding to focus on learning things that I have never or not been able to give my time to. I began reading and 
+                         learning about music marketing, social media advertisements, running social media pages, photography, videography, editing, content 
+                         creation, music production, audio engineering, financial literacy, and much more!
+                    </p>
+                    <p>
+                        Over the past year or so I have had the privilege to work on myself in ways I could have never imagined. As my bucket list has gotten 
+                        smaller and smaller, I have found myself ready to cross off another item and pursue my professional career. In fact, this website is 
+                        part of my journey back. I wanted to create something simple, yet functional to be somewhat of a “headquarters” for my progress. 
+                    </p>
+                    <p>
+                        If you want to learn more, feel free to download my resume or use the contact page to send me an email!
+                        Thank you for being a part of my journey and I'm excited to see what the future has in store. 
+
+                    </p>
+
+                    <div class="btnContainer">
+                        <a href="contact.html"><button id="btnEmail" type="button">Email.</button></a>
+                        <a href="resume.html"><button id="btnResume" type="button">Resume.</button></a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    <!-- END CONTENT CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div id="footer">
+            <div class="socialLogosContainer">
+                <a href="https://www.facebook.com/ben.orrvick.9"><img id="logoFacebook" class= "socialLogos" src="images/Logo_Facebook.png" alt="facebook" width="25px" height="25px"></a>
+                <a href="https://www.twitter.com/benorrvick"><img id="logoTwitter" class= "socialLogos" src="images/Logo_Twitter.png" alt="twitter" width="25px" height="25px"></a>
+                <a href="contact.html"><img id="logoEmail"class= "socialLogos" src="images/Logo_Email.png" alt="email" width="25px" height="25px"></a>
+                <a href="https://www.linkedin.com/in/benjamin-orrvick-325036163"><img id="logoLinkedIn"class= "socialLogos" src="images/Logo_LinkedIn.png" alt="linkedin" width="25px" height="25px"></a>
+            </div>
+            <div>
+                Benjamin Orrvick 2021
+            </div>
+        </div>
+    <!-- END FOOTER -->
+</body>
+</html>
+
+<!-- make text size scaled down with size of screen -->
